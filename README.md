@@ -16,6 +16,21 @@ To run this example app, add the following URI to your Authgear client applicati
 
 - `com.authgear.example.rn://host/path`
 
+To test the app on iOS or Android, run the following commands:
+**Install dependencies**
+```
+npm install
+(cd ios && pod install)
+```
+**Run on iOS**
+```
+npm run ios
+```
+**Run on Android**
+```
+npm run android
+```
+
 ## What is Authgear?
 
 [Authgear](https://www.authgear.com/) is a highly adaptable identity-as-a-service (IDaaS) platform for web and mobile applications.
