@@ -10,7 +10,13 @@ Download/clone the code from this repo then update the configuration.
 
 The project needs to be configured with your Authgear client application's **Endpoint** and **Client ID** in order for the authentication flow to work.
 
-To do this, in `App.tsx`, replace `"<CLIENT_ID>"`, `"<AUTHGEAR_ENDPOINT>"` with with your own Authgear client application credentials.
+To do this, create a `.env` file with the following keys in the root directory of the project:
+```
+AUTHGEAR_CLIENT_ID=
+AUTHGEAR_ENDPOINT=
+AUTHGEAR_REDIRECT_URI=com.authgear.example.rn://host/path
+```
+Add the values for your own Authgear client application credentials in the corresponding key.
 
 To run this example app, add the following URI to your Authgear client application's Authorized Redirect URI:
 

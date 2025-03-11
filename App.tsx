@@ -21,6 +21,8 @@ import authgear, {
   SessionStateChangeReason,
 } from "@authgear/react-native";
 
+import { AUTHGEAR_CLIENT_ID, AUTHGEAR_ENDPOINT, AUTHGEAR_REDIRECT_URI } from "@env"
+
 function App(): React.JSX.Element {
   const [sessionState, setSessionState] = useState<SessionState | null>(() => {
     return authgear.sessionState;
@@ -62,8 +64,8 @@ function App(): React.JSX.Element {
     const configure = async () => {
       try {
         await authgear.configure({
-          clientID: "<CLIENT_ID>",
-          endpoint: "<AUTHGEAR_ENDPOINT>",
+          clientID: AUTHGEAR_CLIENT_ID,
+          endpoint: AUTHGEAR_ENDPOINT,
         });
         await postConfigure();
       } catch (error) {
@@ -77,7 +79,7 @@ function App(): React.JSX.Element {
   const authenticate = useCallback(async () => {
     try {
       authgear.authenticate({
-        redirectURI: "com.authgear.example.rn://host/path",
+        redirectURI: AUTHGEAR_REDIRECT_URI,
       });
     } catch (error) {
       console.log("Authentication Error:" + error);
