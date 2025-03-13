@@ -18,6 +18,8 @@ AUTHGEAR_REDIRECT_URI=com.authgear.example.rn://host/path
 ```
 Add the values for your own Authgear client application credentials in the corresponding key.
 
+Or rename `.env.example` to `.env` then add the Client ID and Endpoint for your Authgear Client Application.
+
 To run this example app, add the following URI to your Authgear client application's Authorized Redirect URI:
 
 - `com.authgear.example.rn://host/path`
