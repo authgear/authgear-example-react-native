@@ -4,9 +4,14 @@ This repo demonstrates how to add authentication to an React Native app using Au
 
 ## Project setup
 
-Download/clone the code from this repo then update the configuration.
+### Create Free Authgear Account
+1. Goto [https://portal.authgear.com](https://portal.authgear.com) and create a free account (or login to your existing account).
+
+2. Then navigate to Applications and create a new client application of type Native App.
 
 ### Configuration
+
+Download/clone the code from this repo then update the configuration.
 
 The project needs to be configured with your Authgear client application's **Endpoint** and **Client ID** in order for the authentication flow to work.
 
