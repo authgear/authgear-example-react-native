@@ -31,5 +31,16 @@ target 'myrnapp' do
       :mac_catalyst_enabled => false,
       # :ccache_enabled => true
     )
+
+    # Xcode 15+ enables User Script Sandboxing by default, which can prevent
+    # the Codegen script phase from writing generated files (e.g.
+    # RCTModuleProviders.mm) before the dependent compile phase runs on a
+    # fresh build folder, causing "Build input file cannot be found" on the
+    # first build. Disable it for all pod targets.
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['ENABLE_USER_SCRIPT_SANDBOXING'] = 'NO'
+      end
+    end
   end
 end
