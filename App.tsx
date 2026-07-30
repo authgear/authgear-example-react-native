@@ -78,7 +78,7 @@ function App(): React.JSX.Element {
 
   const authenticate = useCallback(async () => {
     try {
-      authgear.authenticate({
+      await authgear.authenticate({
         redirectURI: AUTHGEAR_REDIRECT_URI,
       });
     } catch (error) {
