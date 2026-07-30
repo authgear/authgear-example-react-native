@@ -9,9 +9,7 @@
       android:roundIcon="@mipmap/ic_launcher_round"
       android:allowBackup="false"
       android:theme="@style/AppTheme"
-      android:supportsRtl="true"
-      android:usesCleartextTraffic="true">
-      <!-- Cleartext traffic is enabled to allow connecting to a local Authgear dev server over plain HTTP. -->
+      android:supportsRtl="true">
       <activity
         android:name=".MainActivity"
         android:label="@string/app_name"
